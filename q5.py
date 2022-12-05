@@ -52,8 +52,6 @@
 # Para obter a nota máxima dessa questão, não deve-se utilizar nenhuma função pronta do Python.
 
 def q5(s):
-    # Escreva seu código aqui
-def isValid(s):
     a=Counter(s)
     val=list(a.values())
     res=Counter(val)
