@@ -46,8 +46,6 @@ def generateParenthesis(n: int) -> List[str]:
     generate(result, "", 0, 0, n)
     return result
 
-    return []
-
 
 if __name__ == '__main__':
     print(bonus(10))
