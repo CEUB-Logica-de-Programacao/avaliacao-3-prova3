@@ -53,8 +53,17 @@
 
 def q5(s):
     # Escreva seu código aqui
-    return False
-
+def isValid(s):
+    a=Counter(s)
+    val=list(a.values())
+    res=Counter(val)
+    v=list(res.keys())
+    if len(s)==1 or (max(v)-min(v))==0:
+        return'YES'
+    elif len(v)<3 and ((max(v)-min(v)==1 and res.get(max(v))==1) or (min(v)==1 and res.get(min(v))==1)):
+        return 'YES'
+    else:
+        return'NO' 
 
 if __name__ == '__main__':
     print(q5('abcc'))
