@@ -22,6 +22,14 @@ A saída deve ser:
 Isso porque existem dois jogadores com altura máxima (180).
 
 Para obter a nota máxima dessa questão, deve-se utilizar apenas um ``for`` e nenhuma função pronta do Python.
+```
+alturas = [180, 166, 170, 180]
+max = None
+for num in alturas:
+    if (max is None or num > max):
+        max = num
+print('Número de alturas máximas:', alturas.count(max))
+```
 
 ## Questão 2
 

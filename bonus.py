@@ -25,8 +25,7 @@
 # Para obter a nota máxima dessa questão, não deve-se utilizar nenhuma função pronta do Python.
 
 def bonus(n):
-    # Escreva seu código aqui
-    return []
+    pass
 
 
 if __name__ == '__main__':
