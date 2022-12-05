@@ -52,16 +52,31 @@
 # Para obter a nota máxima dessa questão, não deve-se utilizar nenhuma função pronta do Python.
 
 def q5(s):
-    a=Counter(s)
-    val=list(a.values())
-    res=Counter(val)
-    v=list(res.keys())
-    if len(s)==1 or (max(v)-min(v))==0:
-        return'YES'
-    elif len(v)<3 and ((max(v)-min(v)==1 and res.get(max(v))==1) or (min(v)==1 and res.get(min(v))==1)):
-        return 'YES'
-    else:
-        return'NO' 
-
+    caracteres = {}
+    for i in s:
+        if i in caracteres:
+            caracteres[i] += 1
+        else:
+            caracteres[i] = 1
+    min = caracteres[i]
+    max = caracteres[i]
+    qdict = {}
+    for i, qnt in caracteres.items():
+        if qnt in qdict:
+            qdict[qnt] += 1
+        else:
+            qdict[qnt] = 1
+        if qnt < min:
+            min = qnt
+        if qnt > max:
+            max = qnt
+    if len(qdict) == 1:
+        return True
+    elif len(qdict) == 2:
+        if qdict[max] == 1 and max - min == 1:
+            return True
+        elif qdict[min] == 1 and min == 1:
+            return True
+    return False
 if __name__ == '__main__':
     print(q5('abcc'))
