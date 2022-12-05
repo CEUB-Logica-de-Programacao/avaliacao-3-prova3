@@ -26,7 +26,7 @@ def q1(heights):
     max = None
     for num in alturas:
         if (max is None or num > max):
-        max = num
+          max = num
     print('Número de alturas máximas:', alturas.count(max))
     return 0
 if __name__ == '__main__':
