@@ -26,7 +26,7 @@
 
 def bonus(n):
     # Escreva seu código aqui
-   
+    return []
 
 
 if __name__ == '__main__':
