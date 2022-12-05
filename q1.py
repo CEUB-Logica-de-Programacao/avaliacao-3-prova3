@@ -28,6 +28,6 @@ def q1(heights):
         if (max is None or num > max):
             max = num
     print('Número de alturas máximas:', alturas.count(max))
-    return 0
+    return 2
 if __name__ == '__main__':
     print(q1([180, 166, 170, 180]))
