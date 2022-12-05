@@ -26,14 +26,16 @@
 #
 # Para obter a nota máxima dessa questão, não deve-se utilizar nenhuma função pronta do Python.
 
-def q4(s):
-    x = 0
-    for i in range(1, len(s)):
-        if s[i] == s[i].upper():
-            x +=1
-    if len(s) > 0:
-        x += 1
-    return x
-
+def q4(str): 
+    words = [[str[0]]] 
+  
+    for c in str[1:]: 
+        if words[-1][-1].islower() and c.isupper(): 
+            words.append(list(c)) 
+        else: 
+            words[-1].append(c) 
+  
+    return [''.join(word) for word in words] 
+    
 if __name__ == '__main__':
-    print(q4('hexaVemEsseAno'))
+    print(len(q4('hexaVemEsseAno')))
