@@ -27,8 +27,19 @@
 # Para obter a nota máxima dessa questão, não deve-se utilizar nenhuma função pronta do Python.
 
 def q4(s):
-    # Escreva seu código aqui
-    return 0
+    def camel_case_split(str): 
+    words = [[str[0]]] 
+  
+    for c in str[1:]: 
+        if words[-1][-1].islower() and c.isupper(): 
+            words.append(list(c)) 
+        else: 
+            words[-1].append(c) 
+  
+    return [''.join(word) for word in words] 
+    
+s= str(input("Digite sua string"))
+print(len(camel_case_split(s)))
 
 
 if __name__ == '__main__':
