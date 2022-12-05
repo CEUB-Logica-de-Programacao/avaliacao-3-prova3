@@ -21,12 +21,12 @@
 #
 # Para obter a nota máxima dessa questão, deve-se utilizar apenas um ``for`` e nenhuma função pronta do Python.
 
-def q1(heights):
+def q1(alturas):
     alturas = [180, 166, 170, 180]
     max = None
     for num in alturas:
         if (max is None or num > max):
-          max = num
+            max = num
     print('Número de alturas máximas:', alturas.count(max))
     return 0
 if __name__ == '__main__':
